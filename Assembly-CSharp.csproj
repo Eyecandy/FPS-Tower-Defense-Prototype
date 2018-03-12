@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{514A435D-F07B-3516-8858-A09AD47FC2AB}</ProjectGuid>
+    <ProjectGuid>{8B76031E-6785-2F52-6A80-00020686B4C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,18 +46,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Bullet.cs" />
+     <Compile Include="Assets\DestroyEnemy.cs" />
+     <Compile Include="Assets\EnemyHealthBar.cs" />
+     <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\MyScripts\PlayerController.cs" />
      <Compile Include="Assets\MyScripts\PlayerMotor.cs" />
      <Compile Include="Assets\MyScripts\PlayerSetup.cs" />
      <Compile Include="Assets\MyScripts\PlayerShoot.cs" />
      <Compile Include="Assets\MyScripts\PlayerWeapon.cs" />
      <Compile Include="Assets\NavMeshScript.cs" />
+     <Compile Include="Assets\Turret.cs" />
      <Compile Include="Assets\WeaponGraphics.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+     <None Include="Assets\tower-defense-assets\README.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -83,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A58E4CFF-7604-98D8-1877-1A6FC496CF9A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{926166C9-EE2E-127F-1CD2-278A12499676}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

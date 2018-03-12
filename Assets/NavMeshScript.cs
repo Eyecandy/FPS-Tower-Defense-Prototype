@@ -13,7 +13,5 @@ public class NavMeshScript : MonoBehaviour {
 		agent = this.GetComponent<NavMeshAgent> ();
 		agent.SetDestination (target.transform.position);
 	}
-	void Update() {
-		
-	}
+
 }

@@ -90,12 +90,16 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:CROSS_PLATFORM_INPUT
+'Assets/Bullet.cs'
+'Assets/DestroyEnemy.cs'
+'Assets/EnemyHealthBar.cs'
 'Assets/MyScripts/PlayerController.cs'
 'Assets/MyScripts/PlayerMotor.cs'
 'Assets/MyScripts/PlayerSetup.cs'
 'Assets/MyScripts/PlayerShoot.cs'
 'Assets/MyScripts/PlayerWeapon.cs'
 'Assets/NavMeshScript.cs'
+'Assets/Turret.cs'
 'Assets/WeaponGraphics.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
