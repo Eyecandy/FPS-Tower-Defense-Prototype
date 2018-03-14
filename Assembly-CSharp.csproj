@@ -52,10 +52,10 @@
      <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\MyScripts\PlayerController.cs" />
      <Compile Include="Assets\MyScripts\PlayerMotor.cs" />
-     <Compile Include="Assets\MyScripts\PlayerSetup.cs" />
      <Compile Include="Assets\MyScripts\PlayerShoot.cs" />
      <Compile Include="Assets\MyScripts\PlayerWeapon.cs" />
      <Compile Include="Assets\NavMeshScript.cs" />
+     <Compile Include="Assets\PlayerSetup.cs" />
      <Compile Include="Assets\Turret.cs" />
      <Compile Include="Assets\WeaponGraphics.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

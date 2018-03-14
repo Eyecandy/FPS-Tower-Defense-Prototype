@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	private float speed = 5f;
 	[SerializeField]
 	private float lookSensitivity = 5f;
+	[SerializeField]
+	private float thrusterForce = 1000f;
 
 
 	private PlayerMotor motor;
@@ -16,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 		motor = GetComponent<PlayerMotor> ();
 	}
 	void Update(){
-		//Calculate movement velocity as 3D vector
+		//Calculate movement velocity as 3 vector
 		float _xMov = Input.GetAxis("Horizontal");
 		float _zMov = Input.GetAxis("Vertical");
 		Vector3 _moveHor = transform.right * _xMov; //transform.right = vector(1,0,0)
@@ -35,10 +37,20 @@ public class PlayerController : MonoBehaviour {
 		//Calculate camera rotation
 		float _xRot = Input.GetAxis ("Mouse Y");//x val of mouse, we want to rotate around y. (turning)
 
-		Vector3 _cameraRotation = new Vector3 ( _xRot,0f ,0f) * -lookSensitivity;
+		float _cameraRotationX = _xRot * lookSensitivity;
 
 		//apply rotation vector to player
-		motor.CameraRotate(_cameraRotation);
+		motor.CameraRotate(_cameraRotationX);
 
+		//Apply thruster force
+		Vector3 _thrusterForce = Vector3.zero;
+
+		if (Input.GetButton("Jump")) {
+			_thrusterForce = Vector3.up * thrusterForce;
+
+		}
+		motor.ApplyThruster (_thrusterForce);
+
+	
 	}
 }

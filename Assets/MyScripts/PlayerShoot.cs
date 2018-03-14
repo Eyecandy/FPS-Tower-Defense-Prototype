@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerShoot : MonoBehaviour {
+public class PlayerShoot : NetworkBehaviour {
 	public PlayerWeapon weapon;
 	[SerializeField]
 	private Camera cam;
@@ -10,6 +10,7 @@ public class PlayerShoot : MonoBehaviour {
 	private LayerMask mask; //it helps us control what will be hit. i.e other players, stuff with collider bodies.
 	[SerializeField]
 	private ParticleSystem flare;
+
 
 	// Use this for initialization
 	void Start () {
@@ -27,18 +28,24 @@ public class PlayerShoot : MonoBehaviour {
 			flare.Play ();
 		}
 	}
-
+	[Client]
 	void Shoot() {
 		//a variable that stores information about what's hit and where etc.
 		RaycastHit _hit;
 		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit,weapon.range,mask)) {
-			Debug.Log ("We hit: " + _hit.collider.name);
-			if (_hit.collider.CompareTag ("Enemy")) {
-				Health healthEnemy = _hit.rigidbody.GetComponentInParent<Health> ();
-				healthEnemy.ReduceHealth (1);
-					
+			Debug.Log ("We hit: " + _hit.collider.name + " "+ _hit.collider.tag);
+
+			if (_hit.collider.CompareTag ("Player")) {
+				CmdPlayerShot (_hit.collider.name);
 			}
 
 		}
+	}
+
+	[Command]
+	void CmdPlayerShot(string _ID) {
+		
+		Debug.Log (_ID + " has been shot");
+		
 	}
 }

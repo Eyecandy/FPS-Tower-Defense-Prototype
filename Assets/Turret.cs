@@ -7,8 +7,8 @@ public class Turret : MonoBehaviour {
 	[Header("Attributes")]
 	[SerializeField]
 	private float range = 7f;
-	[SerializeField]
-	private  float fireRate = 1f;
+	//[SerializeField]
+	//private  float fireRate = 1f;
 	[SerializeField]
 	private float fireCountDown = 1f;
 
