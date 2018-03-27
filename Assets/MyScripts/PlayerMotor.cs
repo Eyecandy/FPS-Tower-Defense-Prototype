@@ -38,8 +38,10 @@ public class PlayerMotor : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		
 		PerformMovement ();
 		PerformRotation ();
+	
 	}
 
 	//perform movement based on velocity vector

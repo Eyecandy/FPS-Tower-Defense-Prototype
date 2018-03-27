@@ -50,7 +50,10 @@
      <Compile Include="Assets\DestroyEnemy.cs" />
      <Compile Include="Assets\EnemyHealthBar.cs" />
      <Compile Include="Assets\Health.cs" />
+     <Compile Include="Assets\MyScripts\GameManager.cs" />
+     <Compile Include="Assets\MyScripts\MatchSettings.cs" />
      <Compile Include="Assets\MyScripts\PlayerController.cs" />
+     <Compile Include="Assets\MyScripts\PlayerManager.cs" />
      <Compile Include="Assets\MyScripts\PlayerMotor.cs" />
      <Compile Include="Assets\MyScripts\PlayerShoot.cs" />
      <Compile Include="Assets\MyScripts\PlayerWeapon.cs" />

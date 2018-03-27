@@ -12,8 +12,12 @@ public class PlayerShoot : NetworkBehaviour {
 	private ParticleSystem flare;
 
 
+
+
+
 	// Use this for initialization
 	void Start () {
+		weapon = GetComponent<PlayerWeapon> ();
 		if (cam == null) {
 			Debug.LogError ("No cam found");
 			this.enabled = false;
@@ -36,16 +40,18 @@ public class PlayerShoot : NetworkBehaviour {
 			Debug.Log ("We hit: " + _hit.collider.name + " "+ _hit.collider.tag);
 
 			if (_hit.collider.CompareTag ("Player")) {
-				CmdPlayerShot (_hit.collider.name);
+				CmdPlayerShot (_hit.collider.name,weapon.damage);
 			}
 
 		}
 	}
 
 	[Command]
-	void CmdPlayerShot(string _ID) {
+	void CmdPlayerShot(string _playerID,int _damage) {
 		
-		Debug.Log (_ID + " has been shot");
+		Debug.Log (_playerID + " has been shot");
+		PlayerManager _playerManager = GameManager.GetPlayer (_playerID);
+		_playerManager.RpcTakeDamage (_damage);
 		
 	}
 }

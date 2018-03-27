@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.tag);
 		if (other.CompareTag ("Enemy")) {
 			Health enemyHealth = other.gameObject.GetComponent<Health> ();
 			enemyHealth.ReduceHealth (1);

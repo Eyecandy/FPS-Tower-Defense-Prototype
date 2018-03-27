@@ -3,5 +3,8 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Networking.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/CPUtest.unity
   isLoaded: 1
   isActive: 1
